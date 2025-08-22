@@ -8,6 +8,10 @@ import com.awesome.pizza.application.model.Pizza;
 
 public interface PizzaRepository extends APModelDao<Pizza>, LogicalDeleteDao<Pizza> {
 
-    public Optional<Pizza> findByCode(String code);
+	public default Optional<Pizza> findByCode(String code) {
+		return findByLogDelIsFalseAndCode(code);
+	}
+
+	public Optional<Pizza> findByLogDelIsFalseAndCode(String code);
 
 }

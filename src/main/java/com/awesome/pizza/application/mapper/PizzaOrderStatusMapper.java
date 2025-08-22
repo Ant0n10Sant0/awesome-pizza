@@ -1,4 +1,4 @@
-package com.awesome.pizza.application.util.mapper;
+package com.awesome.pizza.application.mapper;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;

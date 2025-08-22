@@ -10,6 +10,6 @@ public class AwesomePizzaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AwesomePizzaApplication.class, args);
-	}
+	} // main
 
-}
+} // AwesomePizzaApplication

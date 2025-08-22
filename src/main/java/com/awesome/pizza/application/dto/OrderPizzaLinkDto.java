@@ -5,9 +5,20 @@ import java.util.Objects;
 import jakarta.validation.constraints.NotBlank;
 
 public class OrderPizzaLinkDto {
+
+	private Long id;
 	private String extra;
 	@NotBlank
 	private String pizza;
+
+	public Long getId() {
+		return id;
+	} // getId
+
+	public OrderPizzaLinkDto setId(Long id) {
+		this.id = id;
+		return this;
+	} // setId
 
 	public String getExtra() {
 		return extra;
@@ -29,7 +40,7 @@ public class OrderPizzaLinkDto {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(extra, pizza);
+		return Objects.hash(extra, id, pizza);
 	} // hashCode
 
 	@Override
@@ -44,13 +55,14 @@ public class OrderPizzaLinkDto {
 			return false;
 		}
 		OrderPizzaLinkDto other = (OrderPizzaLinkDto) obj;
-		return Objects.equals(extra, other.extra) && Objects.equals(pizza, other.pizza);
+		return Objects.equals(extra, other.extra) && Objects.equals(id, other.id) && Objects.equals(pizza, other.pizza);
 	} // equals
 
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("OrderPizzaLinkDto [extra=").append(extra).append(", pizza=").append(pizza).append("]");
+		builder.append("OrderPizzaLinkDto [id=").append(id).append(", extra=").append(extra).append(", pizza=")
+				.append(pizza).append("]");
 		return builder.toString();
 	} // toString
 

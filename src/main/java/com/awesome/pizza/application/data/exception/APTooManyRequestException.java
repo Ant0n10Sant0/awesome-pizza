@@ -3,16 +3,14 @@ package com.awesome.pizza.application.data.exception;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-@ResponseStatus(code = HttpStatus.TOO_MANY_REQUESTS, reason = "Too many requests, retry at a later time")
+@ResponseStatus(code = HttpStatus.TOO_MANY_REQUESTS, reason = APTooManyRequestException.MESSAGE)
 public class APTooManyRequestException extends APException {
 
 	private static final long serialVersionUID = -2050273416085008582L;
+	private static final String MESSAGE = "Too many requests, retry at a later time";
 
 	public APTooManyRequestException() {
-		super();
+		super(APTooManyRequestException.MESSAGE);
 	}
 
-	public APTooManyRequestException(String message) {
-		super(message);
-	}
 }

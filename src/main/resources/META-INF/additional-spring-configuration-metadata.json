@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "awesome.pizza.pizza-order-cache.size",
+  "type": "java.lang.Integer",
+  "description": "Sets the size of the `BlockingQueue` used for caching `PizzaOrder`s"
+}]}

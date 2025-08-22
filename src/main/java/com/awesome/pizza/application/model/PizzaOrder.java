@@ -151,8 +151,7 @@ public class PizzaOrder implements APAuditModel {
 		return Objects.equals(code, other.code) && Objects.equals(deliveryCity, other.deliveryCity)
 				&& Objects.equals(deliveryStreet, other.deliveryStreet)
 				&& Objects.equals(deliveryZip, other.deliveryZip) && id == other.id
-				&& Objects.equals(orderLinks, other.orderLinks) && statusId == other.statusId
-				&& Objects.equals(tableNr, other.tableNr);
+				&& statusId == other.statusId && Objects.equals(tableNr, other.tableNr);
 	} // equals
 
 	@Override

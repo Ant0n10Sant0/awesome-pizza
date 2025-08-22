@@ -141,7 +141,8 @@ public class Pizza implements APAuditModel, LogicalDelete {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Pizza [id=").append(id).append(", code=").append(code).append(", descr=").append(descr)
 				.append(", baseId=").append(baseId).append(", recVer=").append(recVer).append(", tsi=").append(tsi)
-				.append(", tsu=").append(tsu).append(", logDel=").append(logDel).append("]");
+				.append(", tsu=").append(tsu).append(", logDel=").append(logDel).append(", ingredientLinks=")
+				.append(ingredientLinks).append("]");
 		return builder.toString();
 	} // toString
 

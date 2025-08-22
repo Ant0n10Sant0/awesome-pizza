@@ -13,5 +13,7 @@ public interface PizzaOrderRepository extends APModelDao<PizzaOrder> {
 
 	public List<PizzaOrder> findAllByStatusIdOrderByTsuAsc(Long statusId);
 
-	public List<PizzaOrder> findAllByStatusIdAndTsuAfterOrderByTsuAsc(Long statusId, LocalDateTime start);
+	public List<PizzaOrder> findByStatusIdAndTsuGreaterThanEqualAndTsuBeforeOrderByTsuAsc(Long statusId,
+			LocalDateTime start, LocalDateTime end);
+	
 }
